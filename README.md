@@ -34,14 +34,15 @@ print(circumference)
 print(area)
 
 #5. Write a program to compute roots of a quadratic equation when coefficients a, b and c are known(entered by user).
-a=int(input())
-b=int(input())
-c=int(input())
-d = b * b - 4 * a * c
 import math
-sqrt_val =math.sqrt(d)
-print((-b + sqrt_val)/(2 * a))
-print((-b - sqrt_val)/(2 * a))
+coffa=float(input("Enter the Coefficient a : "));
+coffb=float(input("Enter the Coefficient b : "));
+coffc=float(input("Enter the Coefficient c : "));
+diss = math.sqrt((coffb**2)-4*coffa*coffc);
+alpha=(-coffb + diss)/2*coffa;
+beta=(-coffb - diss)/2*coffa;
+print("The Roots of the Quadratic equation : ", "Alpha = ",alpha, "Beta = ",beta);
+
 
 #6. Find volume of a sphere using radius as input.
 r=int(input())
@@ -50,16 +51,19 @@ v=4/3*pi*r**3
 print("volume of sphere=",v)
 
 #7. Count the  number of digits in a number. Example: 3454 has 4 digits.
-num = int(input())
-count = 0
-while num != 0:
-    num //= 10
-    count += 1
-print("Number of digits: " + str(count))
+n=int(input("Enter the digit:"))
+count=0
+while(n>0):
+ count=count+1
+ n=n//10
+print("no of digits are",count)
 
 #8. Write a program that accepts a string and gives output string with all capital letters.
 string = "ankit"
 print(string.upper())
+(or)
+s=str(input("enter a string= "))
+print(s.upper())
 
 9. Write a program to that accepts a string s, an index number n and a character ‘c’. And outputs the string replaced with the character at the index number n. Example- ‘hello’ , 0 , ‘j’ ==> ‘jello’.
 (Hint2: You can try it by join function too by typecasting it to list)
